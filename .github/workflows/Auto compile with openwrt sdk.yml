@@ -116,7 +116,8 @@ jobs:
       - name: Initialization environment
         run: |
           #url_sdk="https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-sdk-x86-64_gcc-14.3.0_musl.Linux-x86_64.tar.zst"
-          url_sdk="https://archive.openwrt.org/releases/24.10.5/targets/mediatek/filogic/openwrt-sdk-24.10.5-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst"
+          #url_sdk="https://archive.openwrt.org/releases/24.10.5/targets/mediatek/filogic/openwrt-sdk-24.10.5-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst"
+          url_sdk="https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-sdk-mediatek-filogic_gcc-14.3.0_musl.Linux-x86_64.tar.zst"
           wget $url_sdk
           file_name=$(echo $url_sdk | awk -F/ '{print $NF}')
           mkdir sdk
@@ -223,12 +224,14 @@ jobs:
         include:
           - platform: aarch64_cortex-a53
             #url_sdk: https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/openwrt-sdk-mvebu-cortexa53_gcc-14.3.0_musl.Linux-x86_64.tar.zst
-            url_sdk: https://archive.openwrt.org/releases/24.10.5/targets/mediatek/filogic/openwrt-sdk-24.10.5-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+            #url_sdk: https://archive.openwrt.org/releases/24.10.5/targets/mediatek/filogic/openwrt-sdk-24.10.5-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+            url_sdk: https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-sdk-mediatek-filogic_gcc-14.3.0_musl.Linux-x86_64.tar.zst
             ver: "ipk"
 
           - platform: aarch64_cortex-a53
             #url_sdk: https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/openwrt-sdk-mvebu-cortexa53_gcc-14.3.0_musl.Linux-x86_64.tar.zst
-            url_sdk: https://archive.openwrt.org/releases/24.10.5/targets/mediatek/filogic/openwrt-sdk-24.10.5-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+            url_sdk: https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-sdk-mediatek-filogic_gcc-14.3.0_musl.Linux-x86_64.tar.zst
+            #url_sdk: https://archive.openwrt.org/releases/24.10.5/targets/mediatek/filogic/openwrt-sdk-24.10.5-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst
             ver: "apk"
 
 
